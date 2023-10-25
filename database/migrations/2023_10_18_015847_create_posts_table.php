@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('extract');
             $table->longText('body');
             
-            $table->enum('status',[Post::BOORADOR,post::PUBLICADO])->default(Post::BOORADOR)->nullable();
+            // $table->enum('status',[Post::BOORADOR,post::PUBLICADO])->default(Post::BOORADOR)->nullable();
             
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
