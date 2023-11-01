@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\RegistrerController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\TagController;
@@ -53,3 +54,9 @@ Route::post('tags', [TagController::class,'store'])->name('api.v1.tags.store');
 Route::get('tags/{tag}', [TagController::class,'show'])->name('api.v1.tags.show');
 Route::put('tags/{tag}', [TagController::class,'update'])->name('api.v1.tags.update');
 Route::delete('tags/{tag}', [TagController::class,'destroy'])->name('api.v1.tags.delete');
+
+Route::get('images', [ImageController::class,'index'])->name('api.v1.images.index');
+Route::post('images', [ImageController::class,'store'])->name('api.v1.images.store');
+Route::get('images/{tag}', [ImageController::class,'show'])->name('api.v1.images.show');
+Route::put('images/{tag}', [ImageController::class,'update'])->name('api.v1.images.update');
+Route::delete('images/{tag}', [ImageController::class,'destroy'])->name('api.v1.images.delete');
